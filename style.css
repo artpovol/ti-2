@@ -217,6 +217,11 @@ body {
     padding-left: 30px;
     background-image: url("img/icon-email-footer.svg");
   }
+
+  .footer-github {
+    padding-left: 30px;
+    /* background-image: url("img/icon-email-footer.svg"); */
+  }
   
   .footer-phone {
     padding-left: 25px;
