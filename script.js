@@ -26,20 +26,19 @@ let skills = [
     }
 ]
 
+const placeIn = document.querySelector(".skills-list");
 skills.forEach(element => {
     const newSkill = document.createElement("dt");
-    newSkill.classList = ["skill-" + element.cssname];
-    newSkill.appendChild(document.createTextNode(element.name));
-
+    newSkill.classList.add(`skill-${element.cssname}`);
+    newSkill.textContent = element.name;
+    
     const newSkillBar = document.createElement("dd");
-    newSkillBar.classList = ["level"];
+    newSkillBar.classList.add("level");
+    newSkillBar.textContent = `${element.value}%`;
     
     const newDiv = document.createElement("div");
-    newDiv.setAttribute("style", `width: ${element.value}%;`);
-    newDiv.appendChild(document.createTextNode(`${element.value}%`));
-    newSkillBar.appendChild(newDiv);
+    newDiv.style = `width: ${element.value}%`;
+    newSkillBar.append(newDiv);
 
-    const placeIn = document.getElementsByClassName("skills-list")[0];
-    placeIn.insertAdjacentElement("beforeend", newSkill);
-    placeIn.insertAdjacentElement("beforeend", newSkillBar);
+    placeIn.append(newSkill, newSkillBar)
 });
