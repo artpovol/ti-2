@@ -4,10 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="img/icon.svg" type="image/svg+xml">
+    <link rel="icon" href="favicon.ico">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700|Old+Standard+TT&display=swap&subset=cyrillic" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <script async src="script.js"></script>
     <title>Портфолио Junior верстальщика</title>
   </head>
 
@@ -35,12 +38,15 @@
         <p>Живу чтобы жить. Мечтаю продолжать.</p>
         <h3>Чем могу быть полезен</h3>
         <p>Могу быть полезен всем, чему научат.</p>
-        <div class="skills">
-          <h3>Мои новые навыки</h3>
-          <dl class="skills-list">
-            
-          </dl>
-        </div>
+        <section class="skills">
+          <header>
+            <h3>Мои новые навыки</h3>
+            <section class="sort-buttons">
+              <button class="sort-button sort-value">Сортировать по значению</button>
+              <button class="sort-button sort-name">Сортировать по названию</button>
+            </section>
+          </header>
+        </section>
       </div>
     </section>
 
@@ -68,6 +74,5 @@
         <a class="footer-github" href="https://github.com/artpovol">github.com/artpovol</a>
       </div>
     </footer>
-    <script src="script.js"></script>
   </body>
 </html>
