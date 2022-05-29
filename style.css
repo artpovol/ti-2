@@ -92,7 +92,6 @@ body {
     font-weight: 400;
     text-align: center;
   }
-
   
   .user-image {
     margin: 0 0 32px;
@@ -111,15 +110,24 @@ body {
     margin: 0 0 32px;
   }
   
+  .skills h3 {
+    display: inline-block;
+  }
+  
+  .skills .sort-buttons {
+    float: right;
+  }
+
   .skills-list {
     margin: 0;
     padding: 0;
   }
   
   .skills-list dt {
-    padding-left: 32px;
     background-repeat: no-repeat;
     background-position: left;
+    background-size: contain;
+    padding-left: 32px;
   }
   
   .skill-html {
@@ -129,17 +137,21 @@ body {
   .skill-css {
     background-image: url("img/icon-css.svg");
   }
-
+  
   .skill-cpp {
-    background-image: url("img/icon-cpp.png");
+    background-image: url("img/icon-cpp.svg");
   }
-
+  
   .skill-net {
-    background-image: url("img/icon-net.png");
+    background-image: url("img/icon-dotnet.svg");
   }
 
   .skill-sql {
-    background-image: url("img/icon-sql.png");
+    background-image: url("img/icon-sql.svg");
+  }
+
+  .skill-py {
+    background-image: url("img/icon-py.svg");
   }
   
   .level {
@@ -192,6 +204,34 @@ body {
     background-color: #288be6;
     color: #ffffff;
   }
+
+  .sort-button {
+    position: relative;
+    margin-bottom: 1em;
+    padding-top: 7px;
+    padding-right: 16px;
+    padding-bottom: 7px;
+    padding-left: 16px;
+    font-size: 14px;
+    border-radius: 2px;
+    background-color: transparent;
+    cursor: pointer;
+    color: #288be6;
+    border: 1px solid #288be6;
+  }
+  
+  .sort-button:active {
+    opacity: 0.8;
+  }
+  
+  .sort-button:focus,
+  .sort-button:hover {
+    color: #ffffff;
+    background-color: #288be6;
+  }
+  .sort-button:focus {
+    outline-color: #91b7db;
+  }
   
   .page-footer {
     padding: 40px 0;
@@ -220,7 +260,7 @@ body {
 
   .footer-github {
     padding-left: 30px;
-    /* background-image: url("img/icon-email-footer.svg"); */
+    background-image: url("img/github-2.svg");
   }
   
   .footer-phone {
@@ -231,6 +271,12 @@ body {
   @media screen and (max-width: 768px) {
     .heading, .subheading {
       font-size: 60px;
+    }
+    .skills h3 {
+      display: block;
+    }
+    .skills .sort-buttons {
+      display: contents;
     }
   }
 
