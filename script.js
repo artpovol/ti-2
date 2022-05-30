@@ -63,17 +63,15 @@ const skills = {
     },
 }
 
-document.addEventListener('click', function(event) {
-    if (event.target.closest(".sort-button")) {
+document.querySelector(".sort-buttons").addEventListener('click', function(event) {
         document.querySelector(".skills-list").remove();
         skills.skillBars.sort(
-            !event.target.closest(".sort-value") ?
+            event.target.closest(".sort-name") ?
             skills.nameSort : skills.valueSort
         );
         if (skills.topSorted = !skills.topSorted) 
         skills.skillBars.reverse();
         skills.drawSkillBars();
-    }
 });
 
 skills.drawSkillBars();
